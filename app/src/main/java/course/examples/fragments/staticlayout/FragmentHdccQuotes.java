@@ -13,12 +13,12 @@ import android.widget.TextView;
  *
  * IMPORTANT extends from Fragment
  * 1.Method to update the Quote text with a titleSelectedIndex
- * 2.inflate quote_fragment XML
+ * 2.inflate fragment_statichdcc_quote XML
  * 3.onActivityCreated set set the TextView
  * 4.After Configuration change, set the Quote text
  *
  */
-public class QuotesFragment extends Fragment {
+public class FragmentHdccQuotes extends Fragment {
 
     private TextView mQuoteTextView = null;
     private int mQuoteCurrIdx = -1;
@@ -27,7 +27,7 @@ public class QuotesFragment extends Fragment {
     private int mQuoteArrayLen = 0;
     //<<< Modified for FragmentStaticConfigLayout
 
-    private static final String TAG = "QuotesFragment";
+    private static final String TAG = "FragmentHdccQuotes";
 
     public int getShownIndex() {
         return mQuoteCurrIdx;
@@ -38,7 +38,7 @@ public class QuotesFragment extends Fragment {
         if (titleSelectedIndex < 0 || titleSelectedIndex >= mQuoteArrayLen)
             return;
         mQuoteCurrIdx = titleSelectedIndex;
-        mQuoteTextView.setText(ActivityStatic.mQuotesDataArray[mQuoteCurrIdx]);
+        mQuoteTextView.setText(ActivityStaticHdcc.mQuotesDataArray[mQuoteCurrIdx]);
     }
 
     //>>> Added for FragmentStaticConfigLayout
@@ -52,12 +52,12 @@ public class QuotesFragment extends Fragment {
     }
     //<<< Added for FragmentStaticConfigLayout
 
-    //inflate quote_fragment XML
+    //inflate fragment_statichdcc_quote XML
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(
-                R.layout.quote_fragment,
+                R.layout.fragment_statichdcc_quote,
                 container,
                 false);
     }
@@ -68,7 +68,7 @@ public class QuotesFragment extends Fragment {
 
         //onActivityCreated set set the TextView
         mQuoteTextView = (TextView) getActivity().findViewById(R.id.quoteView); //get the TextView by ID
-        mQuoteArrayLen = ActivityStatic.mQuotesDataArray.length;
+        mQuoteArrayLen = ActivityStaticHdcc.mQuotesDataArray.length;
 
         //>>> Added for FragmentStaticConfigLayout
         //After Configuration change, set the Quote text

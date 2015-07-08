@@ -15,13 +15,13 @@ import android.widget.ListView;
  * IMPORTANT extends from ListFragment
  * 1.Set up a listener for title selected
  * 2.Fill the xml list with TextView - mTitlesDataArray and if it's neccesary, sets item selected
- * 3.Declares interface for activity implementation (activity has know of QuotesFragment)
+ * 3.Declares interface for activity implementation (activity has know of FragmentHdccQuotes)
  * 4.ListFragment's onListItemClick method call activity implementation
  *
  */
-public class TitlesFragment extends ListFragment {
+public class FragmentHdccTitles extends ListFragment {
 
-    private static final String TAG = "TitlesFragment";
+    private static final String TAG = "FragmentHdccTitles";
 
     //declare an interface
     private TitleSelectionListener mListener = null;
@@ -66,8 +66,8 @@ public class TitlesFragment extends ListFragment {
         getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         setListAdapter(new ArrayAdapter<String>(
                 getActivity(),  //interesting, get the activity instance
-                R.layout.title_item,
-                ActivityStatic.mTitlesDataArray)
+                R.layout.fragment_statichdcc_title,
+                ActivityStaticHdcc.mTitlesDataArray)
         );
 
         //>>> Added for FragmentStaticConfigLayout
@@ -78,7 +78,7 @@ public class TitlesFragment extends ListFragment {
 
     }
 
-    //Declares interface for activity implementation (activity has know of QuotesFragment)
+    //Declares interface for activity implementation (activity has know of FragmentHdccQuotes)
     public interface TitleSelectionListener {
         public void onTitleSelection(int index);
     }

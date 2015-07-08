@@ -15,13 +15,13 @@ public class ActivityDashboard extends Activity {
     }
 
     public void startActivityStatic(View v) {
-        Intent act = new Intent(this, ActivityStatic.class);
+        Intent act = new Intent(this, ActivityStaticHdcc.class);
         super.startActivity(act);
 
     }
 
     public void startActivityDynamic(View v) {
-        Intent act = new Intent(this, ActivityStatic.class);
+        Intent act = new Intent(this, ActivityStaticHdcc.class);
         super.startActivity(act);
 
     }
