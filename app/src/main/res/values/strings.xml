@@ -2,8 +2,9 @@
     <string name="app_name">FragmentImplementations</string>
 
     <string name="activity_dashboard_info">Choose your Quote Viewer Fragment implementation</string>
-    <string name="activity_dashboard_button_static">Static Layout</string>
-    <string name="activity_dashboard_button_dynamic">Dynamic Layout</string>
+    <string name="activity_dashboard_button_1">startActivityStaticHdcc</string>
+    <string name="activity_dashboard_button_2">startActivityProgrammaticXml</string>
+    <string name="activity_dashboard_button_3">startActivityProgrammaticDynamic</string>
 
 
 

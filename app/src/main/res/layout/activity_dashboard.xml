@@ -14,14 +14,21 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="startActivityStatic"
-        android:text="@string/activity_dashboard_button_static" />
+        android:onClick="startActivityStaticHdcc"
+        android:text="@string/activity_dashboard_button_1" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="startActivityStatic"
-        android:text="@string/activity_dashboard_button_dynamic" />
+        android:onClick="startActivityProgrammaticXml"
+        android:text="@string/activity_dashboard_button_2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startActivityProgrammaticDynamic"
+        android:text="@string/activity_dashboard_button_2" />
 
 </LinearLayout>

@@ -14,14 +14,20 @@ public class ActivityDashboard extends Activity {
         setContentView(R.layout.activity_dashboard);
     }
 
-    public void startActivityStatic(View v) {
+    public void startActivityStaticHdcc(View v) {
         Intent act = new Intent(this, ActivityStaticHdcc.class);
         super.startActivity(act);
 
     }
 
-    public void startActivityDynamic(View v) {
-        Intent act = new Intent(this, ActivityStaticHdcc.class);
+    public void startActivityProgrammaticXml(View v) {
+        Intent act = new Intent(this, ActivityProgrammaticXml.class);
+        super.startActivity(act);
+
+    }
+
+    public void startActivityProgrammaticDynamic(View v) {
+        Intent act = new Intent(this, ActivityProgrammaticDynamic.class);
         super.startActivity(act);
 
     }

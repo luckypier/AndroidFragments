@@ -2,6 +2,7 @@ package course.examples.fragments.staticlayout;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 
 /**
  * Created by precuay on 6/28/15.
@@ -26,6 +27,7 @@ public class ActivityStaticHdcc
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("TAG", getClass().getSimpleName() + ":entered onCreate()");
 
         super.onCreate(savedInstanceState);
 
@@ -44,6 +46,7 @@ public class ActivityStaticHdcc
     //implement title's fragment selection
     @Override
     public void onTitleSelection(int index) {
+        Log.i("TAG", getClass().getSimpleName() + ":entered onTitleSelection()");
         if (mFragmentHdccQuotes.getShownIndex() != index) {
             mFragmentHdccQuotes.showQuoteAtIndex(index);
         }
